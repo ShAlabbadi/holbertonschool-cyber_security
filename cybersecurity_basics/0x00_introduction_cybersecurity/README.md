@@ -1,6 +1,6 @@
 # Introduction to Cyber Security
 1. What is Cybersecurity?
-   Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.
+>   Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.
 3. What are the core principles of cybersecurity? (CIA Triad)
    - **Confidentiality:** prevents unauthorized access.
    - **integrity:** prevents unauthorized alterations.
