@@ -73,3 +73,6 @@ Common methods include:
 - **Network Segmentation:** Dividing the network into smaller, isolated parts to contain breaches.
 - **Access Control Lists (ACLs):** Specifying which users or system processes are granted access to objects.
 - **Regular Patching:** Keeping firmware and software up to date to fix vulnerabilities.
+
+
+# Networking Foundations & Architecture
