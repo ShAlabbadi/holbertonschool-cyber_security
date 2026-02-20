@@ -80,22 +80,98 @@ Common methods include:
 # $${\color{red}Networking~ Foundations~ and~ Architecture}$$
 
 ### $${\color{blue}What~ is~ networking~ and~ why~ is~ it~ essential?}$$
+Networking is the practice of connecting computers and other devices together to share resources and information.
+
+**Why it's essential:**
+- **Communication** - Enables devices to communicate and exchange data
+- **Resource Sharing** - Share hardware (printers), software, and files
+- **Cost Reduction** - Centralized resources reduce costs
+- **Centralized Management** - Easier backup, security, and updates
+- **Remote Access** - Access resources from anywhere
+- **Collaboration** - Teams can work together in real-time
+- **Internet Connectivity** - Forms the backbone of the internet
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ LAN~ and~ WAN?}$$
+| Feature | LAN | WAN |
+|---------|-----|-----|
+| **Scope** | Small area (home, office, building) | Large area (cities, countries) |
+| **Speed** | Very high (1 Gbps, 10 Gbps+) | Lower (Mbps to Gbps) |
+| **Ownership** | Single organization | Multiple organizations/ISPs |
+| **Latency** | Low (microseconds) | Higher (milliseconds) |
+| **Technology** | Ethernet, Wi-Fi | MPLS, Fiber, Satellite |
+| **Cost** | Low | High |
+| **Example** | Home network, school lab | The Internet |
 
 ### $${\color{blue}What~ are~ the~ main~ network~ topologies~ (Bus,~ Star,~ Ring,~ Mesh)?}$$
+**Bus Topology**
+- Structure: All devices connected to a single central cable (backbone)
+- Pros: Simple, cost-effective, less cable
+- Cons: Single cable failure brings down entire network
 
+**Star Topology**
+- Structure: All devices connected to central hub/switch
+- Pros: Easy to install/manage, single cable failure affects only one device
+- Cons: Central device is single point of failure
+
+**Ring Topology**
+- Structure: Each device connected to two others forming a circle
+- Pros: Equal access, no collisions, predictable performance
+- Cons: Failure in any cable/device disrupts entire network
+
+**Mesh Topology**
+- Structure: Devices interconnected with multiple redundant paths
+- Pros: High fault tolerance, no single point of failure
+- Cons: Expensive, complex, extensive cabling
+  
 ### $${\color{blue}What~ is~ the~ difference~ between~ physical~ and~ logical~ topology?}$$
+| Physical Topology | Logical Topology |
+|-------------------|------------------|
+| Actual physical arrangement of cables | How data flows through the network |
+| Physical connections between devices | Path data takes regardless of physical layout |
+| Visible to the eye | Conceptual/abstract |
 
 ### $${\color{blue}What~ are~ the~ 7~ layers~ of~ the~ OSI~ model~ and~ their~ functions?}$$
+| Layer | Name | Function | Example Protocols |
+|-------|------|----------|-------------------|
+| **7** | Application | Network services to apps | HTTP, FTP, DNS, SMTP |
+| **6** | Presentation | Data translation, encryption | SSL/TLS, JPEG, MPEG |
+| **5** | Session | Manages sessions | NetBIOS, RPC, SQL |
+| **4** | Transport | End-to-end delivery, flow control | TCP, UDP |
+| **3** | Network | Logical addressing, routing | IP, ICMP, OSPF, RIP |
+| **2** | Data Link | Physical addressing (MAC) | Ethernet, PPP, ARP |
+| **1** | Physical | Bit transmission | Cables, Wi-Fi, hubs |
 
 ### $${\color{blue}What~ happens~ at~ each~ layer~ during~ data~ transmission?}$$
+**Encapsulation (Sender):**
+- Layer 7-5: Application creates data
+- Layer 4: Adds TCP header → Segment
+- Layer 3: Adds IP header → Packet
+- Layer 2: Adds MAC header + trailer → Frame
+- Layer 1: Converts to bits for transmission
 
+**Decapsulation (Receiver):**
+- Reverse process: each layer strips its corresponding header
+- Data moves up the layers to the application
+  
 ### $${\color{blue}What~ is~ encapsulation~ and~ decapsulation?}$$
+| Encapsulation | Decapsulation |
+|---------------|---------------|
+| Adding headers at each layer on sender | Removing headers at each layer on receiver |
+| Data → Segment → Packet → Frame → Bits | Bits → Frame → Packet → Segment → Data |
 
 ### $${\color{blue}What~ are~ the~ 4~ layers~ of~ the~ TCP/IP~ model?}$$
+1. **Application Layer** (Combines OSI Layers 5-7)
+2. **Transport Layer** (OSI Layer 4)
+3. **Internet Layer** (OSI Layer 3)
+4. **Network Access Layer** (Combines OSI Layers 1-2)
 
 ### $${\color{blue}How~ does~ TCP/IP~ compare~ to~ the~ OSI~ model?}$$
+| Feature | OSI Model | TCP/IP Model |
+|---------|-----------|--------------|
+| **Layers** | 7 layers | 4 layers |
+| **Development** | Theoretical (before protocols) | Practical (after protocols) |
+| **Protocol Focus** | Protocol-agnostic | TCP/IP specific |
+| **Usage** | Teaching, reference | Actual internet implementation |
 
 #### 🟡 Protocols & Transmission
 
