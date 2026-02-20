@@ -1,4 +1,5 @@
-# Introduction to Cyber Security: 
+
+# $${\color{blue}Introduction to Cyber Security:}$$ 
 
 ### What is Cybersecurity?
 Cybersecurity is the practice of protecting systems, networks, programs, and data from digital attack, damage, or unauthorized access. Its goal is to ensure the confidentiality, integrity, and availability of information.
