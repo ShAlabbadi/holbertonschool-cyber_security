@@ -1,23 +1,23 @@
-# $${\color{red}Introduction~to~Cyber~Security:}$$
-## $${\color{blue}What~is~the~role~of~a~Switch,~Router,~and~Firewall?}$$
+# $${\color{red}Introduction ~to ~Cyber ~Security}$$
 
-### $${\color{blue}What~is~Cybersecurity?}$$
+
+### $${\color{blue}What~ is~ Cybersecurity?}$$
 Cybersecurity is the practice of protecting systems, networks, programs, and data from digital attack, damage, or unauthorized access. Its goal is to ensure the confidentiality, integrity, and availability of information.
 
-### $${\color{blue}What~are~the~core~principles~of~cybersecurity?~(CIA~Triad)}$$
+### $${\color{blue}What~ are~ the~ core~ principles~ of~ cybersecurity?~ (CIA~ Triad)}$$
 The CIA Triad is the foundational model used to guide information security policies:
 
 - **Confidentiality:** Ensuring data is accessible only to authorized users (e.g., encryption, access controls).
 - **Integrity:** Safeguarding the accuracy and completeness of data and processing methods (e.g., hashing, version control).
 - **Availability:** Ensuring systems and data are accessible when needed by authorized users (e.g., redundancy, disaster recovery).
 
-### $${\color{blue}How~does~encryption~contribute~to~security?}$$
+### $${\color{blue}How~ does~ encryption~ contribute~ to~ security?}$$
 Encryption contributes primarily to **Confidentiality** (and to a degree, Integrity). It converts readable data (plaintext) into an unreadable format (ciphertext) using an algorithm and a key. If unauthorized parties intercept the data, they cannot understand it without the decryption key.
 
-### $${\color{blue}What~is~risk~management~in~cybersecurity?}$$
+### $${\color{blue}What~ is~ risk~ management~ in~ cybersecurity?}$$
 Risk management is the ongoing process of identifying, assessing, and responding to cybersecurity risks. It involves evaluating the potential threats and vulnerabilities to an organization's assets and deciding how to mitigate (fix), transfer (insure), avoid (stop), or accept the risk based on the organization's tolerance.
 
-### $${\color{blue}What~are~the~different~types~of~cybersecurity~threats?}$$
+### $${\color{blue}What~ are~ the~ different~ types~ of~ cybersecurity~ threats?}$$
 Common threats include:
 
 - **Malware:** Malicious software (viruses, worms, ransomware).
@@ -28,16 +28,16 @@ Common threats include:
 - **SQL Injection:** Inserting malicious code into database queries.
 - **Zero-Day Exploits:** Attacking a vulnerability unknown to the software vendor.
 
-### $${\color{blue}What~is~the~difference~between~a~virus~and~a~worm?}$$
+### $${\color{blue}What~ is~ the~ difference~ between~ a~ virus~ and~ a~ worm?}$$
 The main difference lies in **self-replication and propagation**:
 
 - **Virus:** Requires a host program or human action to spread (e.g., opening an infected file). It attaches itself to clean files and spreads when the file is shared.
 - **Worm:** Can spread automatically without human interaction. It self-replicates across networks by exploiting vulnerabilities, often consuming bandwidth.
 
-### $${\color{blue}What~is~social~engineering~in~the~context~of~security?}$$
+### $${\color{blue}What~ is~ social~ engineering~ in~ the~ context~ of~ security?}$$
 Social engineering is the psychological manipulation of people into performing actions or divulging confidential information. Instead of hacking a computer, it "hacks" the human. Examples include phishing (fraudulent emails), pretexting (inventing a scenario), and baiting (offering something enticing).
 
-### $${\color{blue}What~are~the~key~components~of~an~information~security~program?}$$
+### $${\color{blue}What~ are~ the~ key~ components~ of~ an~ information~ security~ program?}$$
 A robust program typically includes:
 
 - **Policies and Procedures:** Documented rules and guidelines.
@@ -47,16 +47,16 @@ A robust program typically includes:
 - **Incident Response Plan:** A playbook for handling breaches.
 - **Business Continuity/Disaster Recovery:** Plans for keeping the business running during/after an incident.
 
-### $${\color{blue}How~do~security~policies~and~frameworks~contribute~to~an~organization's~security~posture?}$$
+### $${\color{blue}How~ do~ security~ policies~ and~ frameworks~ contribute~ to~ an~ organization's~ security~ posture?}$$
 They provide **structure and standardization**. Frameworks (like NIST or ISO 27001) offer a checklist of best practices and controls to implement, ensuring no critical areas are missed. Policies translate these high-level frameworks into specific rules that employees must follow, creating a culture of security and ensuring compliance.
 
-### $${\color{blue}What~is~the~purpose~of~the~OWASP~Top~Ten?}$$
+### $${\color{blue}What~ is~ the~ purpose~ of~ the~ OWASP~ Top~ Ten?}$$
 The Open Web Application Security Project (OWASP) Top Ten is a widely recognized awareness document that lists the top 10 most critical security risks to web applications. Its purpose is to educate developers, designers, and organizations about common vulnerabilities (like Injection and Broken Authentication) so they can build more secure software.
 
-### $${\color{blue}What~is~the~role~of~access~control~in~cybersecurity?}$$
+### $${\color{blue}What~ is~ the~ role~ of~ access~ control~ in~ cybersecurity?}$$
 Access control is the selective restriction of access to a resource. It enforces the principle of **"least privilege,"** ensuring that users and systems only have the permissions necessary to perform their tasks. This limits the potential damage from a compromised account or an insider threat.
 
-### $${\color{blue}How~does~multi-factor~authentication~enhance~security?}$$
+### $${\color{blue}How~ does~ multi- factor~ authentication~ enhance~ security?}$$
 Multi-factor authentication (MFA) enhances security by requiring two or more verification factors to gain access. These factors are typically:
 
 - Something you **know** (password/PIN).
@@ -65,7 +65,7 @@ Multi-factor authentication (MFA) enhances security by requiring two or more ver
 
 This makes it exponentially harder for attackers to gain access, even if they steal a password.
 
-### $${\color{blue}What~are~the~common~methods~for~securing~a~network?}$$
+### $${\color{blue}What~ are~ the~ common~ methods~ for~ securing~ a~ network?}$$
 Common methods include:
 
 - **Firewalls:** Filtering incoming and outgoing traffic based on rules.
@@ -75,5 +75,193 @@ Common methods include:
 - **Access Control Lists (ACLs):** Specifying which users or system processes are granted access to objects.
 - **Regular Patching:** Keeping firmware and software up to date to fix vulnerabilities.
 
-# $${\color{red}Networking~Foundations~&~Architecture:}$$
+---
 
+# $${\color{red}Networking Foundations \&\ Architecture}$$
+<h1><font color="red">Networking Foundations & Architecture</font></h1>
+# $${\color{red}Networking Foundations}$$ $${\color{red}\&}$$ $${\color{red}Architecture}$$
+<h1 style="color: red;">Networking Foundations & Architecture</h1>
+
+
+### $${\color{blue}What~ is~ networking~ and~ why~ is~ it~ essential?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ LAN~ and~ WAN?}$$
+
+### $${\color{blue}What~ are~ the~ main~ network~ topologies~ (Bus,~ Star,~ Ring,~ Mesh)?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ physical~ and~ logical~ topology?}$$
+
+### $${\color{blue}What~ are~ the~ 7~ layers~ of~ the~ OSI~ model~ and~ their~ functions?}$$
+
+### $${\color{blue}What~ happens~ at~ each~ layer~ during~ data~ transmission?}$$
+
+### $${\color{blue}What~ is~ encapsulation~ and~ decapsulation?}$$
+
+### $${\color{blue}What~ are~ the~ 4~ layers~ of~ the~ TCP/IP~ model?}$$
+
+### $${\color{blue}How~ does~ TCP/IP~ compare~ to~ the~ OSI~ model?}$$
+
+#### 🟡 Protocols & Transmission
+
+### $${\color{blue}What~ are~ the~ main~ network~ protocols~ (HTTP,~ HTTPS,~ FTP,~ SSH,~ DNS,~ DHCP)?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ TCP~ and~ UDP?}$$
+
+### $${\color{blue}What~ are~ the~ different~ types~ of~ transmission~ media~ (wired~ vs~ wireless)?}$$
+
+### $${\color{blue}What~ is~ the~ role~ of~ a~ Switch,~ Router,~ and~ Firewall?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ Layer~ 2~ and~ Layer~ 3~ devices?}$$
+
+### $${\color{blue}What~ is~ a~ VLAN~ and~ why~ is~ it~ used?}$$
+
+### $${\color{blue}What~ is~ 802.1Q~ tagging?}$$
+
+### $${\color{blue}What~ are~ VLAN~ hopping~ attacks~ and~ how~ to~ prevent~ them?}$$
+
+### $${\color{blue}What~ is~ Inter-VLAN~ routing?}$$
+
+### $${\color{blue}What~ is~ a~ MAC~ address~ and~ how~ is~ it~ structured?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ OUI~ and~ NIC-specific~ portions?}$$
+
+### $${\color{blue}What~ are~ special~ MAC~ addresses~ (broadcast,~ multicast)?}$$
+
+### $${\color{blue}What~ is~ an~ IPv4~ address~ and~ its~ format?}$$
+
+### $${\color{blue}What~ are~ IP~ address~ classes~ (A,~ B,~ C,~ D,~ E)?}$$
+
+### $${\color{blue}What~ are~ private~ IP~ ranges~ (RFC~ 1918)?}$$
+
+### $${\color{blue}What~ are~ special~ IP~ addresses~ (loopback,~ broadcast)?}$$
+
+### $${\color{blue}What~ is~ CIDR~ notation?}$$
+
+### $${\color{blue}How~ to~ calculate~ subnets,~ hosts~ per~ subnet,~ and~ network~ ranges?}$$
+
+### $${\color{blue}How~ to~ perform~ subnetting~ manually?}$$
+
+### $${\color{blue}What~ is~ ARP~ and~ how~ does~ it~ work?}$$
+
+### $${\color{blue}What~ are~ the~ security~ concerns~ with~ ARP~ (ARP~ spoofing)?}$$
+
+### $${\color{blue}Why~ was~ IPv6~ developed~ and~ how~ does~ it~ differ~ from~ IPv4?}$$
+
+### $${\color{blue}What~ are~ well-known~ ports~ (0-1023)?}$$
+
+### $${\color{blue}What~ are~ registered~ ports~ and~ dynamic~ ports?}$$
+
+### $${\color{blue}What~ is~ DHCP~ and~ what~ problem~ does~ it~ solve?}$$
+
+### $${\color{blue}What~ is~ the~ DORA~ process~ (Discover,~ Offer,~ Request,~ Acknowledge)?}$$
+
+### $${\color{blue}What~ is~ a~ DHCP~ lease~ and~ how~ does~ renewal~ work?}$$
+
+### $${\color{blue}What~ are~ DHCP~ attacks~ (Rogue~ Server,~ Starvation)?}$$
+
+### $${\color{blue}What~ is~ DHCP~ Snooping~ and~ how~ does~ it~ protect~ networks?}$$
+
+### $${\color{blue}What~ is~ NAT~ and~ why~ is~ it~ used?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ Static~ NAT,~ Dynamic~ NAT,~ and~ PAT?}$$
+
+### $${\color{blue}What~ is~ Port~ Forwarding?}$$
+
+### $${\color{blue}What~ is~ NAT~ Traversal~ (STUN,~ TURN,~ ICE)?}$$
+
+### $${\color{blue}What~ is~ Carrier-Grade~ NAT~ (CGNAT)?}$$
+
+### $${\color{blue}What~ is~ DNS~ and~ how~ does~ it~ work?}$$
+
+### $${\color{blue}What~ is~ the~ DNS~ hierarchy~ (Root,~ TLD,~ Authoritative)?}$$
+
+### $${\color{blue}What~ is~ the~ DNS~ resolution~ process?}$$
+
+### $${\color{blue}What~ are~ the~ main~ DNS~ record~ types~ (A,~ AAAA,~ CNAME,~ MX,~ NS,~ TXT,~ PTR)?}$$
+
+### $${\color{blue}What~ are~ DNS~ security~ threats~ (Spoofing,~ Hijacking,~ Tunneling)?}$$
+
+### $${\color{blue}What~ is~ DNSSEC~ and~ encrypted~ DNS~ (DoH,~ DoT)?}$$
+
+
+#### 🟡 Authentication & Directory Services
+
+### $${\color{blue}What~ is~ RADIUS~ and~ how~ does~ it~ work?}$$
+
+### $${\color{blue}What~ is~ TACACS+~ and~ how~ does~ it~ differ~ from~ RADIUS?}$$
+
+### $${\color{blue}What~ is~ Kerberos~ and~ what~ attacks~ target~ it?}$$
+
+### $${\color{blue}What~ is~ LDAP~ and~ how~ is~ it~ used~ in~ networks?}$$
+
+### $${\color{blue}Why~ is~ NTP~ important~ for~ security?}$$
+
+### $${\color{blue}What~ is~ Syslog~ and~ its~ severity~ levels?}$$
+
+### $${\color{blue}What~ is~ an~ Autonomous~ System~ (AS)~ and~ ASN?}$$
+
+### $${\color{blue}What~ is~ BGP~ and~ how~ does~ it~ work?}$$
+
+### $${\color{blue}What~ are~ BGP~ hijacking~ attacks?}$$
+
+### $${\color{blue}What~ is~ peering~ vs~ transit?}$$
+
+### $${\color{blue}What~ is~ an~ Internet~ Exchange~ Point~ (IXP)?}$$
+
+### $${\color{blue}What~ is~ a~ CDN~ and~ how~ does~ Anycast~ work?}$$
+
+### $${\color{blue}What~ are~ the~ Wi-Fi~ frequency~ bands~ (2.4~ GHz,~ 5~ GHz,~ 6~ GHz)?}$$
+
+### $${\color{blue}What~ are~ the~ Wi-Fi~ standards~ (802.11a/b/g/n/ac/ax)?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ WEP,~ WPA,~ WPA2,~ WPA3?}$$
+
+### $${\color{blue}What~ are~ common~ wireless~ attacks~ (Evil~ Twin,~ Deauth,~ KRACK)?}$$
+
+### $${\color{blue}What~ are~ wireless~ security~ best~ practices?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ PSK~ and~ Enterprise~ authentication?}$$
+
+### $${\color{blue}What~ is~ the~ CIA~ Triad~ (Confidentiality,~ Integrity,~ Availability)?}$$
+
+### $${\color{blue}What~ is~ Defense~ in~ Depth?}$$
+
+### $${\color{blue}What~ are~ the~ key~ security~ principles~ (Least~ Privilege,~ Zero~ Trust)?}$$
+
+### $${\color{blue}What~ is~ AAA~ (Authentication,~ Authorization,~ Accounting)?}$$
+
+### $${\color{blue}What~ are~ the~ main~ attack~ categories~ (Reconnaissance,~ Interception,~ DoS)?}$$
+
+### $${\color{blue}What~ is~ a~ Man-in-the-Middle~ (MitM)~ attack?}$$
+
+### $${\color{blue}What~ are~ DDoS~ attacks~ (Volumetric,~ Protocol,~ Application)?}$$
+
+### $${\color{blue}What~ are~ common~ password~ attacks?}$$
+
+### $${\color{blue}What~ are~ the~ types~ of~ firewalls~ (Packet~ Filtering,~ Stateful,~ NGFW)?}$$
+
+### $${\color{blue}How~ to~ write~ firewall~ rules?}$$
+
+### $${\color{blue}What~ is~ a~ DMZ?}$$
+
+### $${\color{blue}What~ is~ the~ difference~ between~ IDS~ and~ IPS?}$$
+
+### $${\color{blue}What~ are~ detection~ methods~ (Signature,~ Anomaly,~ Heuristic)?}$$
+
+### $${\color{blue}What~ is~ network~ segmentation~ and~ why~ is~ it~ important?}$$
+
+### $${\color{blue}What~ is~ Zero~ Trust~ architecture?}$$
+
+### $${\color{blue}What~ is~ a~ SIEM~ and~ what~ logs~ should~ be~ monitored?}$$
+
+### $${\color{blue}What~ is~ NAC~ (Network~ Access~ Control)?}$$
+
+### $${\color{blue}What~ is~ 802.1X~ authentication~ and~ the~ EAP~ methods?}$$
+
+### $${\color{blue}What~ are~ the~ types~ of~ port~ scans~ (TCP~ Connect,~ SYN,~ UDP)?}$$
+
+### $${\color{blue}What~ are~ the~ port~ states~ (Open,~ Closed,~ Filtered)?}$$
+
+### $${\color{blue}What~ protocols~ are~ used~ for~ network~ enumeration~ (SNMP,~ NetBIOS,~ SMB,~ LDAP)?}$$
+
+### $${\color{blue}How~ to~ defend~ against~ reconnaissance?}$$
