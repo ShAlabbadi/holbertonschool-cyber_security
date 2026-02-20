@@ -75,5 +75,5 @@ Common methods include:
 - **Regular Patching:** Keeping firmware and software up to date to fix vulnerabilities.
 
 
-# $${\color{red}Networking Foundations & Architecture}$$
+# $${\color{red}Networking~Foundations~&~Architecture}$$
 
