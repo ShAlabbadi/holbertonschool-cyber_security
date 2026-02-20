@@ -77,11 +77,7 @@ Common methods include:
 
 ---
 
-# $${\color{red}Networking Foundations \&\ Architecture}$$
-<h1><font color="red">Networking Foundations & Architecture</font></h1>
-# $${\color{red}Networking Foundations}$$ $${\color{red}\&}$$ $${\color{red}Architecture}$$
-<h1 style="color: red;">Networking Foundations & Architecture</h1>
-
+# $${\color{red}Networking~ Foundations~ and~ Architecture}$$
 
 ### $${\color{blue}What~ is~ networking~ and~ why~ is~ it~ essential?}$$
 
