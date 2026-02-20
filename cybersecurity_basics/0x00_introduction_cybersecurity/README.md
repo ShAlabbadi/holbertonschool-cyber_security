@@ -176,14 +176,51 @@ Networking is the practice of connecting computers and other devices together to
 #### 🟡 Protocols & Transmission
 
 ### $${\color{blue}What~ are~ the~ main~ network~ protocols~ (HTTP,~ HTTPS,~ FTP,~ SSH,~ DNS,~ DHCP)?}$$
+| Protocol | Full Name | Function |
+|----------|-----------|----------|
+| **HTTP** | Hypertext Transfer Protocol | Web page transfer |
+| **HTTPS** | HTTP Secure | Encrypted web communication |
+| **FTP** | File Transfer Protocol | File transfers |
+| **SSH** | Secure Shell | Remote secure access |
+| **DNS** | Domain Name System | Domain to IP translation |
+| **DHCP** | Dynamic Host Configuration Protocol | Automatic IP assignment |
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ TCP~ and~ UDP?}$$
+| Feature | TCP | UDP |
+|---------|-----|-----|
+| **Connection** | Connection-oriented | Connectionless |
+| **Reliability** | Reliable (acknowledgments) | Unreliable (no ACK) |
+| **Ordering** | Maintains packet order | No ordering |
+| **Speed** | Slower (overhead) | Faster |
+| **Use Cases** | Web, Email, FTP | Streaming, VoIP, Gaming |
 
 ### $${\color{blue}What~ are~ the~ different~ types~ of~ transmission~ media~ (wired~ vs~ wireless)?}$$
+**Wired:**
+- **Twisted-Pair Cable:** Common Ethernet, telephones
+- **Coaxial Cable:** Cable TV, older Ethernet
+- **Fiber-Optic:** High speed, long distance, immune to interference
 
+**Wireless:**
+- **Radio Waves (Wi-Fi):** 802.11 standards
+- **Microwaves:** Terrestrial/satellite communication
+- **Infrared:** Short-range (remote controls)
+  
 ### $${\color{blue}What~ is~ the~ role~ of~ a~ Switch,~ Router,~ and~ Firewall?}$$
+| Device | OSI Layer | Function |
+|--------|-----------|----------|
+| **Hub** | Layer 1 | Broadcasts to all ports (dumb device) |
+| **Switch** | Layer 2 | Forwards based on MAC addresses |
+| **Router** | Layer 3 | Connects networks using IP addresses |
+| **Firewall** | Layer 3-7 | Filters traffic based on security rules |
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ Layer~ 2~ and~ Layer~ 3~ devices?}$$
+| Layer 2 Devices | Layer 3 Devices |
+|-----------------|-----------------|
+| Operate at Data Link Layer | Operate at Network Layer |
+| Use MAC addresses | Use IP addresses |
+| Forward frames | Forward packets |
+| Create a single broadcast domain | Connect different networks |
+| Example: Switch | Example: Router |
 
 ### $${\color{blue}What~ is~ a~ VLAN~ and~ why~ is~ it~ used?}$$
 
