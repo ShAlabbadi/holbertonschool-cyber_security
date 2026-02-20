@@ -1,4 +1,5 @@
-# $${\color{red}Introduction~to~Cyber~Security:}$$ 
+# $${\color{red}Introduction~to~Cyber~Security:}$$
+## $${\color{blue}What~is~the~role~of~a~Switch,~Router,~and~Firewall?}$$
 
 ### $${\color{blue}What~is~Cybersecurity?}$$
 Cybersecurity is the practice of protecting systems, networks, programs, and data from digital attack, damage, or unauthorized access. Its goal is to ensure the confidentiality, integrity, and availability of information.
