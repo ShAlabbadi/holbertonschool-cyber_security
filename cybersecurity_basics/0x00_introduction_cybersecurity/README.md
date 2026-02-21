@@ -904,24 +904,203 @@ Forward to: 192.168.1.100:80 (Internal web server)
 **Key Principle:** Never rely on single security control.
 
 ### $${\color{blue}What~ are~ the~ key~ security~ principles~ (Least~ Privilege,~ Zero~ Trust)?}$$
+**Least Privilege:**
+
+| Aspect | Description |
+|--------|-------------|
+| Definition | Users and systems get only minimum access necessary |
+| Purpose | Limit damage from compromised accounts |
+| Examples | User has read-only access, not admin rights; temporary access grants |
+
+**Zero Trust:**
+
+| Aspect | Description |
+|--------|-------------|
+| Definition | "Never trust, always verify" - no implicit trust based on network location |
+| Core Concept | Every access request must be authenticated and authorized |
+| Key Elements | Micro-segmentation, multi-factor authentication, continuous monitoring |
+| Slogan | Trust no one, verify everything |
 
 ### $${\color{blue}What~ is~ AAA~ (Authentication,~ Authorization,~ Accounting)?}$$
+**AAA** is a framework for controlling access to network resources.
+User → [Authentication],"Who you are?" → [Authorization],  "What you can do" → [Accounting], "What you did"
+
+| Component | Description | Examples |
+|-----------|-------------|----------|
+| Authentication | Verifying identity | Password, biometrics, certificate |
+| Authorization | Determining access rights | Permissions, ACLs, roles |
+| Accounting | Tracking user activities | Logs, audit trails, billing |
+
+**AAA Protocols:**
+
+| Protocol | Description |
+|----------|-------------|
+| RADIUS | Common for network access |
+| TACACS+ | Cisco device administration |
+| Diameter | Evolved RADIUS for mobile networks |
 
 ### $${\color{blue}What~ are~ the~ main~ attack~ categories~ (Reconnaissance,~ Interception,~ DoS)?}$$
+| Category | Description | Examples |
+|----------|-------------|----------|
+| Reconnaissance | Information gathering | Port scans, ping sweeps, OS fingerprinting |
+| Interception | Eavesdropping on communications | Sniffing, MitM, ARP spoofing |
+| Denial of Service | Disrupting service availability | DDoS, SYN flood, resource exhaustion |
+| Manipulation | Altering data or systems | Malware, data tampering, configuration changes |
+| Social Engineering | Manipulating people | Phishing, pretexting, baiting |
 
 ### $${\color{blue}What~ is~ a~ Man-in-the-Middle~ (MitM)~ attack?}$$
+**MitM** occurs when an attacker secretly relays and potentially alters communication between two parties.
+Normal Communication:
+[Alice] <-----------------------> [Bob]
 
+MitM Attack:
+[Alice] <---> [Attacker] <---> [Bob]
+
+**Common MitM Attacks:**
+
+| Attack | Description |
+|--------|-------------|
+| ARP Spoofing | Fake ARP replies to intercept traffic |
+| DNS Spoofing | Fake DNS responses redirect to malicious site |
+| Session Hijacking | Steal session cookies |
+| SSL Stripping | Downgrade HTTPS to HTTP |
+| Evil Twin | Fake Wi-Fi AP intercepts traffic |
+
+**Mitigation:**
+- Encryption (HTTPS, SSH)
+- Certificate validation
+- Mutual authentication
+- ARP spoofing protection
+  
 ### $${\color{blue}What~ are~ DDoS~ attacks~ (Volumetric,~ Protocol,~ Application)?}$$
+**DDoS (Distributed Denial of Service)** attacks overwhelm targets with traffic from multiple sources.
 
+| Type | Description | Examples | Target |
+|------|-------------|----------|--------|
+| Volumetric | Consume bandwidth | UDP floods, ICMP floods | Network capacity |
+| Protocol | Exhaust server resources | SYN floods, Ping of Death | Firewalls, load balancers |
+| Application | Target specific applications | HTTP floods, Slowloris | Web servers, databases |
+
+**DDoS Attack Layers:**
+Application Layer (L7) ─── HTTP floods, DNS queries
+↓
+Protocol Layer (L3-4) ─── SYN floods, Smurf attacks
+↓
+Volumetric Layer (L3) ─── UDP floods, ICMP floods
+
+**Mitigation:**
+- DDoS protection services (Cloudflare, Akamai)
+- Rate limiting
+- Anycast distribution
+- Blackholing
+  
 ### $${\color{blue}What~ are~ common~ password~ attacks?}$$
+| Attack | Description | Mitigation |
+|--------|-------------|------------|
+| Brute Force | Try all possible combinations | Account lockout, rate limiting |
+| Dictionary Attack | Try common words and passwords | Password complexity, banned password lists |
+| Password Spraying | Try one password across many accounts | MFA, CAPTCHA, monitoring |
+| Credential Stuffing | Use breached credentials from other sites | MFA, password managers |
+| Keylogging | Capture keystrokes | Anti-malware, on-screen keyboards |
+| Phishing | Trick users into revealing passwords | User training, MFA |
+| Rainbow Table | Precomputed hash lookup | Salting passwords |
+| Pass the Hash | Use hash instead of password | Disable NTLM, Credential Guard |
 
+**Password Security Best Practices:**
+- Use long, complex passwords
+- Enable MFA (Multi-Factor Authentication)
+- Use password managers
+- Regular password changes (for high-risk accounts)
+- Never reuse passwords
+  
 ### $${\color{blue}What~ are~ the~ types~ of~ firewalls~ (Packet~ Filtering,~ Stateful,~ NGFW)?}$$
+| Type | OSI Layer | Description | Features |
+|------|-----------|-------------|----------|
+| Packet Filtering | L3-L4 | Inspects individual packets based on rules | Simple, fast, stateless |
+| Stateful | L3-L4 | Tracks connection state | More secure, remembers sessions |
+| NGFW (Next-Gen) | L2-L7 | Deep packet inspection, application awareness | App control, IDS/IPS, threat intelligence |
+
+**Comparison:**
+
+| Feature | Packet Filtering | Stateful | NGFW |
+|---------|------------------|----------|------|
+| Inspection Depth | Headers only | Headers + connection state | Full packet (L2-L7) |
+| Performance | Fastest | Fast | Slower (more processing) |
+| Application Awareness | No | No | Yes |
+| IDS/IPS Integration | No | No | Yes |
+| Example | ACLs on routers | ASA, Check Point | Palo Alto, FortiGate |
 
 ### $${\color{blue}How~ to~ write~ firewall~ rules?}$$
+**Basic Rule Structure:**
+[Action] [Protocol] [Source IP] [Source Port] [Destination IP] [Destination Port] [Interface]
+**Rule Components:**
+
+| Component | Description | Example |
+|-----------|-------------|---------|
+| Action | Allow or Deny | ALLOW, DENY, REJECT |
+| Protocol | IP protocol | TCP, UDP, ICMP, ANY |
+| Source IP | Originating address | 192.168.1.0/24, ANY |
+| Source Port | Originating port | 1024-65535, 80 |
+| Destination IP | Target address | 10.0.0.1, web-server |
+| Destination Port | Target port | 80, 443, 22 |
+| Interface | Network interface | inside, outside, eth0 |
 
 ### $${\color{blue}What~ is~ a~ DMZ?}$$
+**Rule Examples:**
+- Allow HTTP from anywhere to web server
+- ALLOW TCP ANY ANY 192.168.1.10 80
+- Allow SSH only from admin network
+
+**Rule Ordering:**
+1. Most specific rules first
+2. Implicit deny at the end
+3. Rules processed top-down
+
+**Best Practices:**
+- Use explicit deny at the end
+- Document each rule
+- Review rules regularly
+- Use object groups for similar items
+- Log suspicious traffic
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ IDS~ and~ IPS?}$$
+| Feature | IDS (Intrusion Detection System) | IPS (Intrusion Prevention System) |
+|---------|-----------------------------------|-----------------------------------|
+| **Action** | Monitors and alerts | Monitors and blocks |
+| **Position** | Out-of-band (passive) | Inline (active) |
+| **Response** | Logs, alerts | Blocks, resets connection, drops packets |
+| **Traffic Impact** | No impact | Can introduce latency |
+| **False Positives** | Alert only | May block legitimate traffic |
+
+**Placement:**
+IDS Placement (Passive):
+[Traffic] -----> [Network] -----> [Destination]
+|
++-----> [IDS] (Copies traffic)
+
+IPS Placement (Inline):
+[Traffic] -----> [IPS] -----> [Destination]
+|
+(Blocks/throttles)
+
+
+**Detection Methods:**
+
+| Method | Description |
+|--------|-------------|
+| **Signature-based** | Match known attack patterns |
+| **Anomaly-based** | Detect deviation from baseline |
+| **Heuristic** | Behavioral analysis |
+| **Policy-based** | Enforce security policies |
+
+**Examples:**
+
+| System | Type | Vendor |
+|--------|------|--------|
+| Snort | IDS/IPS | Open source |
+| Suricata | IDS/IPS | Open source |
+| Cisco Firepower | IPS | Cisco |
+| Palo Alto | IPS (built-in) | Palo Alto Networks |
 
 ### $${\color{blue}What~ are~ detection~ methods~ (Signature,~ Anomaly,~ Heuristic)?}$$
 
