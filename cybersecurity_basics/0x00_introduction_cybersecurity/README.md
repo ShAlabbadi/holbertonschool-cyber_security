@@ -1083,14 +1083,113 @@ Forward to: 192.168.1.100:80 (Internal web server)
 | Palo Alto | IPS (built-in) | Palo Alto Networks |
 
 ### $${\color{blue}What~ are~ detection~ methods~ (Signature,~ Anomaly,~ Heuristic)?}$$
+| Method | Description | How It Works | Pros | Cons | Example |
+|--------|-------------|--------------|------|------|---------|
+| **Signature-based** | Matches known attack patterns | Compares traffic against database of attack signatures | Low false positives, fast, reliable for known threats | Cannot detect new/unknown attacks | Antivirus, Snort rules |
+| **Anomaly-based** | Detects deviation from baseline | Establishes normal behavior and alerts on outliers | Can detect unknown attacks | High false positives | Behavioral analysis, UEBA |
+| **Heuristic** | Behavioral analysis using rules of thumb | Analyzes behavior patterns and makes decisions based on experience | Balances detection vs false positives | Complex to tune | Sandboxing, malware analysis |
+
+**Comparison:**
+
+| Aspect | Signature-based | Anomaly-based | Heuristic |
+|--------|-----------------|---------------|-----------|
+| **Unknown Attacks** |  No |  Yes |  Yes |
+| **False Positives** | Low | High | Medium |
+| **Performance** | Fast | Resource intensive | Medium |
+| **Maintenance** | Requires updates | Requires training | Requires tuning |
+| **Example Use** | Known malware | Network behavioral analysis | Zero-day detection |
 
 ### $${\color{blue}What~ is~ network~ segmentation~ and~ why~ is~ it~ important?}$$
+**Network Segmentation** is dividing a network into smaller subnetworks or segments.
+**Why It's Important:**
+
+| Benefit | Description |
+|---------|-------------|
+| **Security** | Contain breaches; attacker in Sales can't access Finance |
+| **Performance** | Reduce broadcast traffic, improve network efficiency |
+| **Compliance** | Meet regulatory requirements (PCI-DSS, HIPAA) |
+| **Access Control** | Granular control over who accesses what |
+| **Attack Surface Reduction** | Limit lateral movement |
+
+**Segmentation Methods:**
+
+| Method | Technology | Description |
+|--------|------------|-------------|
+| **Physical** | Separate switches/routers | Physically isolated networks |
+| **Logical** | VLANs | Virtual separation on same hardware |
+| **Micro-segmentation** | Software-defined | Per-workload policies (Zero Trust) |
 
 ### $${\color{blue}What~ is~ Zero~ Trust~ architecture?}$$
+**Zero Trust** is a security model based on "never trust, always verify" - no implicit trust is granted based on network location.
+
+**Key Concepts:**
+
+| Concept | Description |
+|---------|-------------|
+| **Never Trust, Always Verify** | Every access request must be authenticated |
+| **Micro-segmentation** | Isolate workloads at granular level |
+| **Least Privilege** | Minimum access necessary |
+| **Continuous Monitoring** | Verify throughout session, not just entry |
+| **Assume Breach** | Design as if attacker already inside |
+
+**Zero Trust Components:**
+
+| Component | Function |
+|-----------|----------|
+| **Identity** | Strong authentication (MFA) |
+| **Device Health** | Endpoint compliance checks |
+| **Network** | Micro-segmentation, encryption |
+| **Application** | Access controls, WAF |
+| **Data** | Encryption, DLP |
+| **Visibility** | Analytics, monitoring |
 
 ### $${\color{blue}What~ is~ a~ SIEM~ and~ what~ logs~ should~ be~ monitored?}$$
+**SIEM (Security Information and Event Management)** is a solution that aggregates, correlates, and analyzes log data from across the organization to detect security threats.
+
+**Key Functions:**
+| Function | Description |
+|----------|-------------|
+| **Log Collection** | Aggregates logs from multiple sources |
+| **Normalization** | Standardizes log formats |
+| **Correlation** | Links related events across sources |
+| **Alerting** | Real-time threat notifications |
+| **Reporting** | Compliance and forensic reports |
+| **Retention** | Long-term log storage |
+
+**Critical Logs to Monitor:**
+| Source | What to Monitor | Why |
+|--------|-----------------|-----|
+| **Firewalls** | Denied connections, policy changes | Detect scanning, unauthorized access |
+| **Authentication Servers** | Failed logins, privilege escalation | Brute force attempts, account compromise |
+| **DNS** | Queries to known bad domains | Malware C2 communication |
+| **DHCP** | IP assignments, rogue devices | Unauthorized devices on network |
+| **Web Servers** | HTTP errors, SQL injection attempts | Web attacks |
+| **Database** | Unusual queries, access patterns | Data exfiltration |
+| **Email** | Phishing attempts, malware attachments | Social engineering |
+| **Endpoints** | Process creation, file changes | Malware execution |
+| **VPN** | Connection attempts, geographic anomalies | Unauthorized remote access |
+| **Cloud Services** | API calls, configuration changes | Cloud misconfiguration |
+
+**Log Severity to Monitor:**
+| Level | What to Watch |
+|-------|---------------|
+| **Emergency (0)** | System crashes, critical failures |
+| **Alert (1)** | Immediate action required |
+| **Critical (2)** | Severe errors needing attention |
+| **Error (3)** | Operational problems |
+| **Warning (4)** | Potential issues |
 
 ### $${\color{blue}What~ is~ NAC~ (Network~ Access~ Control)?}$$
+**NAC (Network Access Control)** is a security solution that enforces policies on devices attempting to access the network, ensuring they meet security requirements before granting access.
+
+**NAC Benefits:**
+| Benefit | Description |
+|---------|-------------|
+| **Visibility** | See all devices on network |
+| **Control** | Enforce security policies |
+| **Containment** | Isolate infected devices |
+| **Compliance** | Meet regulatory requirements |
+| **Guest Management** | Controlled visitor access |
 
 ### $${\color{blue}What~ is~ 802.1X~ authentication~ and~ the~ EAP~ methods?}$$
 
