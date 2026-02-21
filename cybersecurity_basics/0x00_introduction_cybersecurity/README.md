@@ -923,7 +923,8 @@ Forward to: 192.168.1.100:80 (Internal web server)
 
 ### $${\color{blue}What~ is~ AAA~ (Authentication,~ Authorization,~ Accounting)?}$$
 **AAA** is a framework for controlling access to network resources.
-User → [Authentication],"Who you are?" → [Authorization],  "What you can do" → [Accounting], "What you did"
+
+`User` → `[Authentication],"Who you are?"` → `[Authorization],  "What you can do"` → `[Accounting], "What you did"`
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
