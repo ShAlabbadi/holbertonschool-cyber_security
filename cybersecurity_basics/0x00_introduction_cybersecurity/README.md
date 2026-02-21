@@ -356,10 +356,9 @@ Private IP ranges are reserved for use within private networks and are not routa
 4. Convert back to decimal
 
 **Example:** IP `192.168.1.130` with subnet mask `255.255.255.192` (/26)
-IP: `11000000.10101000.00000001.10000010`
-Mask: `11111111.11111111.11111111.11000000`
-AND: ------------------------------------
-Network: `11000000.10101000.00000001.10000000` = `192.168.1.128`
+- IP: `11000000.10101000.00000001.10000010`
+- Mask: `11111111.11111111.11111111.11000000`
+- Network: `11000000.10101000.00000001.10000000` = `192.168.1.128`
 
 ### $${\color{blue}What~ is~ ARP~ and~ how~ does~ it~ work?}$$
 **ARP (Address Resolution Protocol)** maps a known IP address (Layer 3) to an unknown MAC address (Layer 2) on a local network.
