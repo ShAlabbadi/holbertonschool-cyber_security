@@ -173,7 +173,8 @@ Networking is the practice of connecting computers and other devices together to
 | **Protocol Focus** | Protocol-agnostic | TCP/IP specific |
 | **Usage** | Teaching, reference | Actual internet implementation |
 
-#### 🟡 Protocols & Transmission
+
+## $${\color{yellow}Protocols~ And~ Transmission}$$
 
 ### $${\color{blue}What~ are~ the~ main~ network~ protocols~ (HTTP,~ HTTPS,~ FTP,~ SSH,~ DNS,~ DHCP)?}$$
 | Protocol | Full Name | Function |
@@ -354,11 +355,11 @@ Private IP ranges are reserved for use within private networks and are not routa
 3. The result is the network address in binary
 4. Convert back to decimal
 
-**Example:** IP 192.168.1.130 with subnet mask 255.255.255.192 (/26)
-IP: 11000000.10101000.00000001.10000010
-Mask: 11111111.11111111.11111111.11000000
+**Example:** IP `192.168.1.130` with subnet mask `255.255.255.192` (/26)
+IP: `11000000.10101000.00000001.10000010`
+Mask: `11111111.11111111.11111111.11000000`
 AND: ------------------------------------
-Network: 11000000.10101000.00000001.10000000 = 192.168.1.128
+Network: `11000000.10101000.00000001.10000000` = `192.168.1.128`
 
 ### $${\color{blue}What~ is~ ARP~ and~ how~ does~ it~ work?}$$
 **ARP (Address Resolution Protocol)** maps a known IP address (Layer 3) to an unknown MAC address (Layer 2) on a local network.
@@ -657,7 +658,7 @@ Forward to: 192.168.1.100:80 (Internal web server)
 
 **DoT/DoH:** Prevent eavesdropping and manipulation of DNS queries.
 
-#### $${\color{yellow}Authentication~ And~ Directory~ Services}$$
+## $${\color{yellow}Authentication~ And~ Directory~ Services}$$
 
 ### $${\color{blue}What~ is~ RADIUS~ and~ how~ does~ it~ work?}$$
 
