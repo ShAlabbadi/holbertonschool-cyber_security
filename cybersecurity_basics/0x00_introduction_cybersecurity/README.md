@@ -173,6 +173,7 @@ Networking is the practice of connecting computers and other devices together to
 | **Protocol Focus** | Protocol-agnostic | TCP/IP specific |
 | **Usage** | Teaching, reference | Actual internet implementation |
 
+---
 
 ## $${\color{yellow}Protocols~ And~ Transmission}$$
 
@@ -651,28 +652,167 @@ Forward to: 192.168.1.100:80 (Internal web server)
 **DNSSEC:** Adds signatures to ensure answers haven't been tampered with.
 
 **DoT/DoH:** Prevent eavesdropping and manipulation of DNS queries.
+---
 
 ## $${\color{yellow}Authentication~ And~ Directory~ Services}$$
 
 ### $${\color{blue}What~ is~ RADIUS~ and~ how~ does~ it~ work?}$$
+**RADIUS (Remote Authentication Dial-In User Service)** is a networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for users who connect to a network service.
+
+**How it works:**
+
+| Step | Direction | Description |
+|------|-----------|-------------|
+| **1** | User → NAS | User connects to Network Access Server (VPN, switch, Wi-Fi) |
+| **2** | NAS → RADIUS Server | NAS sends Access-Request with user credentials |
+| **3** | RADIUS Server → NAS | Server checks credentials against database |
+| **4** | RADIUS Server → NAS | Server sends Access-Accept or Access-Reject |
+| **5** | NAS → User | User is granted or denied access |
+
+**Components:**
+
+| Component | Description |
+|-----------|-------------|
+| **RADIUS Client** | NAS (router, switch, VPN concentrator, access point) |
+| **RADIUS Server** | Central authentication server |
+| **Database** | Stores user credentials (local, LDAP, Active Directory) |
+
+**Use Cases:**
+- VPN authentication
+- 802.1X Wi-Fi Enterprise
+- Router/switch administrative access
+- Dial-up and broadband access
 
 ### $${\color{blue}What~ is~ TACACS+~ and~ how~ does~ it~ differ~ from~ RADIUS?}$$
+**TACACS+ (Terminal Access Controller Access-Control System Plus)** is a Cisco-developed AAA protocol that provides separate authentication, authorization, and accounting services.
+
+**Key differences:**
+
+| Feature | RADIUS | TACACS+ |
+|---------|--------|---------|
+| **AAA Separation** | Combines auth + auth | Separates all three |
+| **Encryption** | Encrypts only password | Encrypts entire packet |
+| **Transport** | UDP (1812/1813) | TCP (49) |
+| **Granular Control** | Limited | Command-level control |
+| **Use Case** | End-user access (VPN, Wi-Fi) | Device administration |
 
 ### $${\color{blue}What~ is~ Kerberos~ and~ what~ attacks~ target~ it?}$$
+**Kerberos** is a network authentication protocol using tickets and secret-key cryptography. It's the default in Windows Active Directory.
+
+**Common Attacks:**
+
+| Attack | Description |
+|--------|-------------|
+| **Pass-the-Ticket** | Steal and reuse valid Kerberos tickets |
+| **Kerberoasting** | Request service tickets and crack offline |
+| **Golden Ticket** | Forge master tickets (compromise KDC) |
+| **Silver Ticket** | Forge service tickets for specific services |
+| **AS-REP Roasting** | Target users with pre-authentication disabled |
 
 ### $${\color{blue}What~ is~ LDAP~ and~ how~ is~ it~ used~ in~ networks?}$$
+**LDAP (Lightweight Directory Access Protocol)** is a protocol for accessing and maintaining directory information services.
+
+**Uses in networks:**
+- Centralized user authentication
+- Single Sign-On (SSO)
+- Network device admin authentication
+- Email directories
+- Authorization (group membership checks)
+
+**Directory Structure:**
+dc=example,dc=com
+├── ou=Users
+│ ├── uid=jdoe
+│ └── uid=asmith
+├── ou=Groups
+│ ├── cn=Admins
+│ └── cn=Users
+└── ou=Computers
+├── cn=WS-001
+└── cn=SRV-001
 
 ### $${\color{blue}Why~ is~ NTP~ important~ for~ security?}$$
+**NTP (Network Time Protocol)** synchronizes clocks across a network.
 
+**Security importance:**
+- **Log Correlation:** Match timestamps from different devices during investigations
+- **Kerberos:** Requires synchronized time for ticket validation
+- **Certificates:** SSL/TLS certificates have validity periods
+- **Forensics:** Accurate timeline reconstruction
+- **Compliance:** Audit trails require accurate timestamps
+  
 ### $${\color{blue}What~ is~ Syslog~ and~ its~ severity~ levels?}$$
+**Syslog** is a standard protocol for message logging to a central server.
+
+**Severity Levels (0-7):**
+
+| Level | Severity | Description |
+|-------|----------|-------------|
+| **0** | Emergency | System unusable |
+| **1** | Alert | Immediate action required |
+| **2** | Critical | Critical conditions |
+| **3** | Error | Error conditions |
+| **4** | Warning | Warning conditions |
+| **5** | Notice | Normal but significant |
+| **6** | Informational | Info messages |
+| **7** | Debug | Debug messages |
 
 ### $${\color{blue}What~ is~ an~ Autonomous~ System~ (AS)~ and~ ASN?}$$
+**Autonomous System (AS)** is a collection of networks under single administrative control with a unified routing policy.
+
+**ASN (Autonomous System Number):**
+
+| Type | Range | Use |
+|------|-------|-----|
+| **Public ASN** | 1-64511 | Internet routing |
+| **Private ASN** | 64512-65535 | Internal use |
+| **32-bit ASN** | 65536-4294967295 | Extended range |
+
+**Examples:** AS15169 (Google), AS16509 (Amazon AWS), AS8075 (Microsoft)
 
 ### $${\color{blue}What~ is~ BGP~ and~ how~ does~ it~ work?}$$
+**BGP (Border Gateway Protocol)** is the routing protocol that connects Autonomous Systems on the internet.
+
+**How it works:**
+- Exchanges routing information between ASes
+- Uses AS Path to prevent loops
+- Makes routing decisions based on policies
+- eBGP = between different ASes
+- iBGP = within same AS
+
+**BGP Message Types:**
+- **OPEN:** Establish session
+- **UPDATE:** Advertise/withdraw routes
+- **KEEPALIVE:** Maintain session
+- **NOTIFICATION:** Error reporting
 
 ### $${\color{blue}What~ are~ BGP~ hijacking~ attacks?}$$
+**BGP hijacking** is malicious advertisement of IP prefixes not owned by the attacker.
+
+**Types:**
+
+| Type | Description |
+|------|-------------|
+| **Prefix Hijack** | Advertise more specific prefix |
+| **AS Path Shortening** | Advertise shorter path to attract traffic |
+| **Sub-prefix Hijack** | Advertise smaller subnet |
+
+**Consequences:**
+- Traffic interception (MitM)
+- Traffic blackholing (DoS)
+- Impersonation
+- Cryptocurrency theft
+
+**Prevention:** RPKI, BGPsec, IRR filtering, monitoring
 
 ### $${\color{blue}What~ is~ peering~ vs~ transit?}$$
+| Aspect | Peering | Transit |
+|--------|---------|---------|
+| **Cost** | Free (mutual benefit) | Paid service |
+| **Reachability** | Peer's network only | Entire internet |
+| **Traffic** | Between two networks | All destinations |
+| **Relationship** | Equal partners | Customer-provider |
+| **Example** | Netflix peers with Comcast | Small business buys from ISP |
 
 ### $${\color{blue}What~ is~ an~ Internet~ Exchange~ Point~ (IXP)?}$$
 
