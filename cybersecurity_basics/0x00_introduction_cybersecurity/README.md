@@ -237,7 +237,8 @@ Networking is the practice of connecting computers and other devices together to
 
 **Frame structure with 802.1Q tag:**
 | Destination MAC | Source MAC | 802.1Q Tag | EtherType | Payload | FCS |
-| (6 bytes) | (6 bytes) | (4 bytes) | (2 bytes) | | (4 bytes) |
+|----------|---------|--------|---------|---------|---------|
+| 6 bytes | 6 bytes | 4 bytes | 2 bytes | varies | 4 bytes |
 
 The tag contains:
 - **VLAN ID (12 bits):** Identifies the VLAN (1-4094)
@@ -264,6 +265,7 @@ A **MAC (Media Access Control) address** is a unique 48-bit (6-byte) hardware id
 
 **Structure:**
 | OUI (24 bits) | NIC-specific (24 bits) |
+|---------|-----------|
 | 00:1A:2B | 3C:4D:5E |
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ OUI~ and~ NIC-specific~ portions?}$$
@@ -582,21 +584,25 @@ Forward to: 192.168.1.100:80 (Internal web server)
 - Load balancing (one name can map to multiple IPs)
   
 ### $${\color{blue}What~ is~ the~ DNS~ hierarchy~ (Root,~ TLD,~ Authoritative)?}$$
- [Root] (13 logical root servers)
-          |
-    [.com TLD] [.org TLD] [.net TLD] [.uk TLD]
-          |         |          |          |
-   [example.com] [wikipedia.org] [bbc.co.uk]
-          |
- [www.example.com] [mail.example.com]
+                [Root] (.)
+                   |
+    ---------------------------------
+    |               |               |
+ [.com]          [.org]          [.net]         [.uk]        (TLD Servers)
+    |               |               |               |
+    [example.com] [wikipedia.org] [example.net] [bbc.co.uk] (Domain Level)
+       |              |                |            | 
+[www.example.com] [mail.example.org] | (Subdomains) [news.bbc.co.uk]
 
-**The hierarchy:**
+ **The Three Levels of DNS Hierarchy:**
 
-| Level | Description | Examples |
-|-------|-------------|----------|
-| **Root Servers** | Top of hierarchy; 13 logical servers | a.root-servers.net, b.root-servers.net |
-| **TLD (Top-Level Domain) Servers** | Manage domains sharing a common extension | .com, .org, .net, .uk, .jp |
-| **Authoritative Servers** | Hold actual DNS records for specific domains | ns1.example.com, ns2.example.com |
+| Level | Description | Examples | Who Manages |
+|-------|-------------|----------|-------------|
+| **Root Level** | The top of the hierarchy; knows where all TLD servers are | `.` (dot) | IANA/ICANN (13 logical root servers) |
+| **TLD Level** | Top-Level Domains; manages all domains sharing a common extension | `.com`, `.org`, `.net`, `.uk`, `.jp` | Registry operators (Verisign, etc.) |
+| **Authoritative Level** | The final source for a specific domain's DNS records | `example.com`, `wikipedia.org` | Domain owners/registrars |
+
+
 
 ### $${\color{blue}What~ is~ the~ DNS~ resolution~ process?}$$
 **Step-by-step process:**
