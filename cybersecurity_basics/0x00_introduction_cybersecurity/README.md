@@ -1192,11 +1192,61 @@ Forward to: 192.168.1.100:80 (Internal web server)
 | **Guest Management** | Controlled visitor access |
 
 ### $${\color{blue}What~ is~ 802.1X~ authentication~ and~ the~ EAP~ methods?}$$
+**802.1X** is port-based network access control using three components:
+- **Supplicant** (client)
+- **Authenticator** (switch/AP)
+- **Authentication Server** (RADIUS)
+
+**EAP Methods:**
+| Method | Security | Use Case |
+|--------|----------|----------|
+| **EAP-TLS** |  Very High | Certificates, highest security |
+| **EAP-PEAP** |  High | Most common enterprise (password) |
+| **EAP-TTLS** |  High | Mixed environments |
+| **EAP-FAST** |  High | Cisco environments |
+| **LEAP/MD5** |  Weak | Avoid (deprecated) |
 
 ### $${\color{blue}What~ are~ the~ types~ of~ port~ scans~ (TCP~ Connect,~ SYN,~ UDP)?}$$
+| Scan Type | Method | Stealth |
+|-----------|--------|---------|
+| **TCP Connect** | Full handshake | Low (logged) |
+| **SYN (Half-Open)** | SYN only, then RST | Medium |
+| **UDP** | UDP packets, wait response | Slow/unreliable |
+| **FIN/NULL/Xmas** | Odd flag combinations | Stealth (bypass some firewalls) |
 
 ### $${\color{blue}What~ are~ the~ port~ states~ (Open,~ Closed,~ Filtered)?}$$
+| State | Description | Response | What It Means |
+|-------|-------------|----------|---------------|
+| **Open** | Port is accepting connections | SYN/ACK (TCP) or response (UDP) | Application is listening |
+| **Closed** | Port is accessible but no application listening | RST (TCP) or ICMP unreachable (UDP) | Port reachable but nothing running |
+| **Filtered** | No response or error returned | No response or ICMP unreachable | Firewall or filter blocking |
+| **Unfiltered** | Port accessible but state unknown | Specific responses (ACK scan) | Rare, only in specific scans |
+| **Open\|Filtered** | Unable to determine if open or filtered | No response | Common with UDP/FIN scans |
+| **Closed\|Filtered** | Unable to determine if closed or filtered | Ambiguous response | Rare |
 
 ### $${\color{blue}What~ protocols~ are~ used~ for~ network~ enumeration~ (SNMP,~ NetBIOS,~ SMB,~ LDAP)?}$$
+| Protocol | Port | Information Leaked |
+|----------|------|-------------------|
+| **SNMP** | UDP 161/162 | System info, community strings |
+| **NetBIOS** | UDP 137-139, TCP 139 | Hostnames, shares, users |
+| **SMB** | TCP 445 | File shares, users, OS info |
+| **LDAP** | TCP 389/636 | Directory structure, users, groups |
+| **DNS** | UDP/TCP 53 | Zone transfers, hostnames |
 
 ### $${\color{blue}How~ to~ defend~ against~ reconnaissance?}$$
+**Defense Layers:**
+| Layer | Defenses |
+|-------|----------|
+| **Network Perimeter** | Firewalls, ACLs, ingress/egress filtering, rate limiting |
+| **Detection** | IDS/IPS (Snort, Suricata), port scan detectors, SIEM |
+| **Hardening** | Disable unnecessary services, hide banners, change defaults |
+| **Segmentation** | VLANs, micro-segmentation, 802.1X |
+| **Deception** | Honeypots, port knocking, moving target defense |
+
+**Key Actions:**
+- Block unnecessary ports
+- Change default SNMP community strings
+- Disable NetBIOS and SMBv1
+- Restrict LDAP anonymous binds
+- Monitor for scan patterns
+- Use least privilege access
