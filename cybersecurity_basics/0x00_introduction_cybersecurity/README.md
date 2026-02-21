@@ -584,16 +584,7 @@ Forward to: 192.168.1.100:80 (Internal web server)
 - Load balancing (one name can map to multiple IPs)
   
 ### $${\color{blue}What~ is~ the~ DNS~ hierarchy~ (Root,~ TLD,~ Authoritative)?}$$
-                [Root] (.)
-                   |
-    ---------------------------------
-    |               |               |
- [.com]          [.org]          [.net]         [.uk]        (TLD Servers)
-    |               |               |               |
-    [example.com] [wikipedia.org] [example.net] [bbc.co.uk] (Domain Level)
-       |              |                |            | 
-[www.example.com] [mail.example.org] | (Subdomains) [news.bbc.co.uk]
-
+ 
  **The Three Levels of DNS Hierarchy:**
 
 | Level | Description | Examples | Who Manages |
@@ -601,8 +592,6 @@ Forward to: 192.168.1.100:80 (Internal web server)
 | **Root Level** | The top of the hierarchy; knows where all TLD servers are | `.` (dot) | IANA/ICANN (13 logical root servers) |
 | **TLD Level** | Top-Level Domains; manages all domains sharing a common extension | `.com`, `.org`, `.net`, `.uk`, `.jp` | Registry operators (Verisign, etc.) |
 | **Authoritative Level** | The final source for a specific domain's DNS records | `example.com`, `wikipedia.org` | Domain owners/registrars |
-
-
 
 ### $${\color{blue}What~ is~ the~ DNS~ resolution~ process?}$$
 **Step-by-step process:**
