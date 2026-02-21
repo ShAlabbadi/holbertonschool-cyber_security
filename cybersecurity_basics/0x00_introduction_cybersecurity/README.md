@@ -650,9 +650,8 @@ Forward to: 192.168.1.100:80 (Internal web server)
 | **DoH** | DNS over HTTPS | 443 | Encrypts DNS over HTTPS (blends with web traffic) |
 
 **DNSSEC:** Adds signatures to ensure answers haven't been tampered with.
-
 **DoT/DoH:** Prevent eavesdropping and manipulation of DNS queries.
----
+
 
 ## $${\color{yellow}Authentication~ And~ Directory~ Services}$$
 
