@@ -802,24 +802,106 @@ Forward to: 192.168.1.100:80 (Internal web server)
 | **Example** | Netflix peers with Comcast | Small business buys from ISP |
 
 ### $${\color{blue}What~ is~ an~ Internet~ Exchange~ Point~ (IXP)?}$$
+**IXP** is a physical location where different networks interconnect to exchange traffic directly.
+
+| Benefit | Description |
+|---------|-------------|
+| **Cost Reduction** | Avoid transit fees |
+| **Lower Latency** | Direct connections |
+| **Traffic Local** | Keeps regional traffic local |
+
+**Examples:** DE-CIX (Germany), AMS-IX (Amsterdam), LINX (London)
 
 ### $${\color{blue}What~ is~ a~ CDN~ and~ how~ does~ Anycast~ work?}$$
+**CDN (Content Delivery Network)** is distributed servers delivering content from nearest location.
+
+**Anycast:** Multiple servers share same IP; traffic routes to nearest server.
+
+| Type | Description |
+|------|-------------|
+| **Unicast** | One-to-one |
+| **Anycast** | One-to-nearest |
+| **Multicast** | One-to-many |
+| **Broadcast** | One-to-all |
+
+**Uses:** DNS root servers, CDN edge servers, DDoS mitigatio
 
 ### $${\color{blue}What~ are~ the~ Wi-Fi~ frequency~ bands~ (2.4~ GHz,~ 5~ GHz,~ 6~ GHz)?}$$
+| Band | Range | Speed | Interference |
+|------|-------|-------|--------------|
+| **2.4 GHz** | Best | Slowest | Highest |
+| **5 GHz** | Moderate | Fast | Low |
+| **6 GHz** | Shortest | Fastest | Lowest |
 
 ### $${\color{blue}What~ are~ the~ Wi-Fi~ standards~ (802.11a/b/g/n/ac/ax)?}$$
+| Standard | Gen | Year | Bands | Max Speed |
+|----------|-----|------|-------|-----------|
+| **802.11a** | Wi-Fi 1 | 1999 | 5 GHz | 54 Mbps |
+| **802.11b** | Wi-Fi 1 | 1999 | 2.4 GHz | 11 Mbps |
+| **802.11g** | Wi-Fi 3 | 2003 | 2.4 GHz | 54 Mbps |
+| **802.11n** | Wi-Fi 4 | 2009 | 2.4/5 GHz | 600 Mbps |
+| **802.11ac** | Wi-Fi 5 | 2014 | 5 GHz | 6.9 Gbps |
+| **802.11ax** | Wi-Fi 6 | 2019 | 2.4/5/6 GHz | 9.6 Gbps |
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ WEP,~ WPA,~ WPA2,~ WPA3?}$$
+| Standard | Encryption | Security | Status |
+|----------|------------|----------|--------|
+| **WEP** | RC4 |  Very Weak | Broken |
+| **WPA** | TKIP/RC4 |  Weak | Deprecated |
+| **WPA2** | AES-CCMP |  Moderate | Current but vulnerable |
+| **WPA3** | AES-GCMP |  Strong | Recommended |
 
 ### $${\color{blue}What~ are~ common~ wireless~ attacks~ (Evil~ Twin,~ Deauth,~ KRACK)?}$$
+| Attack | Description |
+|--------|-------------|
+| **Evil Twin** | Fake AP mimicking legitimate network |
+| **Deauth Attack** | Forcibly disconnect clients |
+| **KRACK** | Key reinstallation attack on WPA2 |
+| **Rogue AP** | Unauthorized AP on network |
+| **WPS PIN Attack** | Brute force WPS PIN |
 
 ### $${\color{blue}What~ are~ wireless~ security~ best~ practices?}$$
+| # | Practice |
+|---|----------|
+| 1 | Use WPA3 (or WPA2 with strong password) |
+| 2 | Disable WPS |
+| 3 | Change default credentials |
+| 4 | Enable Management Frame Protection |
+| 5 | Regular firmware updates |
+| 6 | Guest network isolation |
+| 7 | Disable unused features |
 
 ### $${\color{blue}What~ is~ the~ difference~ between~ PSK~ and~ Enterprise~ authentication?}$$
+| Feature | PSK | Enterprise |
+|---------|-----|------------|
+| **Authentication** | Single password | Individual credentials |
+| **Key Management** | Same key for all | Unique keys per user |
+| **Use Case** | Home/SOHO | Corporate |
+| **Security** | Weaker | Stronger |
 
 ### $${\color{blue}What~ is~ the~ CIA~ Triad~ (Confidentiality,~ Integrity,~ Availability)?}$$
+| Element | Definition | Controls |
+|---------|------------|----------|
+| **Confidentiality** | Data accessible only to authorized users | Encryption, access controls |
+| **Integrity** | Data accuracy and completeness | Hashing, digital signatures |
+| **Availability** | Data accessible when needed | Redundancy, backups, DDoS protection |
 
 ### $${\color{blue}What~ is~ Defense~ in~ Depth?}$$
+**Defense in Depth** is layered security strategy - multiple controls protect assets.
+
+**Layers:**
+
+| Layer | Controls |
+|-------|----------|
+| **Policies** | Security policies, training |
+| **Physical** | Locks, biometrics, CCTV |
+| **Perimeter** | Firewalls, VPNs, DMZ |
+| **Network** | VLANs, ACLs, segmentation |
+| **Host** | Antivirus, hardening |
+| **Application** | WAF, input validation |
+| **Data** | Encryption, backups |
+
+**Key Principle:** Never rely on single security control.
 
 ### $${\color{blue}What~ are~ the~ key~ security~ principles~ (Least~ Privilege,~ Zero~ Trust)?}$$
 
