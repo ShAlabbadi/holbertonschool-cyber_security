@@ -950,11 +950,6 @@ User → [Authentication],"Who you are?" → [Authorization],  "What you can do"
 
 ### $${\color{blue}What~ is~ a~ Man-in-the-Middle~ (MitM)~ attack?}$$
 **MitM** occurs when an attacker secretly relays and potentially alters communication between two parties.
-Normal Communication:
-[Alice] <-----------------------> [Bob]
-
-MitM Attack:
-[Alice] <---> [Attacker] <---> [Bob]
 
 **Common MitM Attacks:**
 
@@ -980,13 +975,6 @@ MitM Attack:
 | Volumetric | Consume bandwidth | UDP floods, ICMP floods | Network capacity |
 | Protocol | Exhaust server resources | SYN floods, Ping of Death | Firewalls, load balancers |
 | Application | Target specific applications | HTTP floods, Slowloris | Web servers, databases |
-
-**DDoS Attack Layers:**
-Application Layer (L7) ─── HTTP floods, DNS queries
-↓
-Protocol Layer (L3-4) ─── SYN floods, Smurf attacks
-↓
-Volumetric Layer (L3) ─── UDP floods, ICMP floods
 
 **Mitigation:**
 - DDoS protection services (Cloudflare, Akamai)
@@ -1032,9 +1020,9 @@ Volumetric Layer (L3) ─── UDP floods, ICMP floods
 
 ### $${\color{blue}How~ to~ write~ firewall~ rules?}$$
 **Basic Rule Structure:**
-[Action] [Protocol] [Source IP] [Source Port] [Destination IP] [Destination Port] [Interface]
-**Rule Components:**
+`[Action] [Protocol] [Source IP] [Source Port] [Destination IP] [Destination Port] [Interface]`
 
+**Rule Components:**
 | Component | Description | Example |
 |-----------|-------------|---------|
 | Action | Allow or Deny | ALLOW, DENY, REJECT |
@@ -1045,7 +1033,6 @@ Volumetric Layer (L3) ─── UDP floods, ICMP floods
 | Destination Port | Target port | 80, 443, 22 |
 | Interface | Network interface | inside, outside, eth0 |
 
-### $${\color{blue}What~ is~ a~ DMZ?}$$
 **Rule Examples:**
 - Allow HTTP from anywhere to web server
 - ALLOW TCP ANY ANY 192.168.1.10 80
@@ -1063,6 +1050,12 @@ Volumetric Layer (L3) ─── UDP floods, ICMP floods
 - Use object groups for similar items
 - Log suspicious traffic
 
+  
+### $${\color{blue}What~ is~ a~ DMZ?}$$
+**DMZ (Demilitarized Zone)** is a network segment that sits between the internal network and the internet, exposing external-facing services while keeping internal network separate.
+
+
+
 ### $${\color{blue}What~ is~ the~ difference~ between~ IDS~ and~ IPS?}$$
 | Feature | IDS (Intrusion Detection System) | IPS (Intrusion Prevention System) |
 |---------|-----------------------------------|-----------------------------------|
@@ -1072,20 +1065,7 @@ Volumetric Layer (L3) ─── UDP floods, ICMP floods
 | **Traffic Impact** | No impact | Can introduce latency |
 | **False Positives** | Alert only | May block legitimate traffic |
 
-**Placement:**
-IDS Placement (Passive):
-[Traffic] -----> [Network] -----> [Destination]
-|
-+-----> [IDS] (Copies traffic)
-
-IPS Placement (Inline):
-[Traffic] -----> [IPS] -----> [Destination]
-|
-(Blocks/throttles)
-
-
 **Detection Methods:**
-
 | Method | Description |
 |--------|-------------|
 | **Signature-based** | Match known attack patterns |
@@ -1094,7 +1074,6 @@ IPS Placement (Inline):
 | **Policy-based** | Enforce security policies |
 
 **Examples:**
-
 | System | Type | Vendor |
 |--------|------|--------|
 | Snort | IDS/IPS | Open source |
