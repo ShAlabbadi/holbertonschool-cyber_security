@@ -719,18 +719,6 @@ Forward to: 192.168.1.100:80 (Internal web server)
 - Email directories
 - Authorization (group membership checks)
 
-**Directory Structure:**
-dc=example,dc=com
-├── ou=Users
-│ ├── uid=jdoe
-│ └── uid=asmith
-├── ou=Groups
-│ ├── cn=Admins
-│ └── cn=Users
-└── ou=Computers
-├── cn=WS-001
-└── cn=SRV-001
-
 ### $${\color{blue}Why~ is~ NTP~ important~ for~ security?}$$
 **NTP (Network Time Protocol)** synchronizes clocks across a network.
 
