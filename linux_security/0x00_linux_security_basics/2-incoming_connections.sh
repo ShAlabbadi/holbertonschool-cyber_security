@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -t 'sport = :88'
+sudo ss -tlnp | grep :88
