@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -tlnp | grep :80
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
