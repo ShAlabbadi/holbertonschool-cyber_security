@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -l 'sport = :22'
+sudo ss -t 'sport = :88'
