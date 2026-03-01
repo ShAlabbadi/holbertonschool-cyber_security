@@ -1,2 +1,1 @@
-home.passive.hbtn
-holberton.passive.hbtn
+7f41f824d5e9e83d6741c7a99cffb6a0
