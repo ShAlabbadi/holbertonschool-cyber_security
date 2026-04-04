@@ -1,11 +1,3 @@
-HTTP/1.1 200 OK
-Server: nginx/1.18.0
-Date: Sat, 04 Apr 2026 19:19:03 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 3268
-Connection: keep-alive
-Vary: Cookie
-
 <!-- 
 Proudly made by Campusna Sec Team:
 	Yosri <yosri@web0x00.hbtn>
@@ -28,115 +20,34 @@ Proudly made by Campusna Sec Team:
 	<body>
 		<header>
 			<img src="/static/img/logo.png" />
-			<h2>b56a3b9665089ba2626e90628838f1b7</h2>
+			<h2></h2>
 			<div style="width: 120px;"></div>
 		</header>
 		<main>
 		
 		<div class="all_tickets">
-			<h3>Support Center</h3>
-			<h1>Welcome, Support</h1>
-			<h3>Latest tickets</h3>
 			
-			<a href="/ticket?id=1" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Return Case</span>
+			
+			
+			<div class="ticket_box">
+				<h3>Ticket ID: <b>1</b></h3>
+				
+				<span class="closed" style="line-height: 30px;">&nbsp;Closed&nbsp;</span>
+				
+			</div>
+			<form method="POST">
+				<div class="new_ticket_box">
+					<h3>Subject:</h3>
+					<h3 style="background-color: unset;">Return Case</h3><hr />
+					<h3>Message:</h3>
+					<h3 style="background-color: unset;">Hello I would Like to return my product, thank you!</h3><hr />
 					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
+					<h3 style="background-color: unset;">Return is being processed</h3><hr />
+					<a href="/support"><span>back</span></a><hr />
 					
+
 				</div>
-			</a>
-			
-			<a href="/ticket?id=2" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Shipment Problem</span>
-					
-					<span class="pending">Pending</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=3" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Incomplete Order</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=4" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Shipment Problem</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=5" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Return Case</span>
-					
-					<span class="pending">Pending</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=6" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Shipment Problem</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=7" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">Return Case</span>
-					
-					<span class="pending">Pending</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=8" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">test</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=9" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">test 2</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=10" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">test 2</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
-			<a href="/ticket?id=11" style="all: unset;">
-				<div class="ticket_box">
-					<span class="title">test 3</span>
-					
-					<span class="closed">&nbsp;Closed&nbsp;</span>
-					
-				</div>
-			</a>
-			
+			</form>
 		</div>
 
 		</main>
