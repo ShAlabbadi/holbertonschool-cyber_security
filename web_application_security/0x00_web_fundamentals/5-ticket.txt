@@ -1,58 +1,10 @@
-<!-- 
-Proudly made by Campusna Sec Team:
-	Yosri <yosri@web0x00.hbtn>
-	Maroua <maroua@web0x00.hbtn>
-	Abdou <abdou@web0x00.hbtn>
--->
-<!DOCTYPE html>
-<html>
-	<head>
-
-		<meta charset="utf-8" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	    <meta name="description" content="Support Center | 0x00. Web Fundamentals" />
-	    <meta name="author" content="Yosri.me" />
-	    <title>Support Center | 0x00. Web Fundamentals</title>
-	    <link href="/static/css/base.css" rel="stylesheet" />
-	    <link href="/static/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-	  	
-	</head>
-	<body>
-		<header>
-			<img src="/static/img/logo.png" />
-			<h2></h2>
-			<div style="width: 120px;"></div>
-		</header>
-		<main>
-		
-		<div class="all_tickets">
-			
-			
-			
-			<div class="ticket_box">
-				<h3>Ticket ID: <b>1</b></h3>
-				
-				<span class="closed" style="line-height: 30px;">&nbsp;Closed&nbsp;</span>
-				
-			</div>
-			<form method="POST">
-				<div class="new_ticket_box">
-					<h3>Subject:</h3>
-					<h3 style="background-color: unset;">Return Case</h3><hr />
-					<h3>Message:</h3>
-					<h3 style="background-color: unset;">Hello I would Like to return my product, thank you!</h3><hr />
-					
-					<h3 style="background-color: unset;">Return is being processed</h3><hr />
-					<a href="/support"><span>back</span></a><hr />
-					
-
-				</div>
-			</form>
-		</div>
-
-		</main>
-		<footer>
-			&copy; 2023 Holberton School. All rights reserved. 
-		</footer>
-	</body>
-</html>
+curl 'http://web0x00.hbtn/ticket?id=1' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
+  -H 'Accept-Language: en-US,en;q=0.5' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Connection: keep-alive' \
+  -H 'Referer: http://web0x00.hbtn/support' \
+  -H 'Cookie: session=.eJxFyksKgCAURuG9_GMJmzoqWkIrULyR4AuvUhDtPaGBw_NxHqw2uMhQh_ZMAlvjmgKVIXvLOZXaoZbWm4J2Hgr8-3KRkbeU02lqhICzULNAYypRBxoj3g8vsSW4.adFdtg.Pb3My_3SDQaDzYNRyydSaGgYYb0' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'Priority: u=0, i'
