@@ -1,1 +1,1 @@
-/api/a3/nosql_injection/username,password
+/api/a3/nosql_injection/market_values
